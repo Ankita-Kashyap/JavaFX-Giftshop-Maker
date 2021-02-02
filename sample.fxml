@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <SplitPane dividerPositions="0.15481171548117154" layoutY="88.0" orientation="VERTICAL" prefHeight="393.0" prefWidth="646.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="71.0" prefWidth="577.0">
+               <children>
+                  <ImageView fitHeight="71.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@giftImage1.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="71.0" fitWidth="161.0" layoutX="161.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@giftImage1.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="71.0" fitWidth="161.0" layoutX="322.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@giftImage1.jpg" />
+                     </image></ImageView>
+                  <ImageView fitHeight="71.0" fitWidth="161.0" layoutX="483.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@giftImage1.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: pink;" SplitPane.resizableWithParent="false">
+               <children>
+                  <SplitMenuButton fx:id="sex" contentDisplay="BOTTOM" layoutX="399.0" layoutY="19.0" mnemonicParsing="false" onAction="#getSex" text="Gender" textFill="#d11a1a" textOverrun="WORD_ELLIPSIS" AnchorPane.leftAnchor="399.0" AnchorPane.topAnchor="19.0">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Male" />
+                      <MenuItem mnemonicParsing="false" text="Female" />
+                    </items>
+                  </SplitMenuButton>
+                  <Text layoutX="293.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the Gender" wrappingWidth="105.13672637939453" />
+                  <Text layoutX="482.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friend's age " />
+                  <SplitMenuButton fx:id="age" contentDisplay="BOTTOM" layoutX="550.0" layoutY="20.0" mnemonicParsing="false" onAction="#getAge" text="Age" textFill="#d11a1a" textOverrun="WORD_ELLIPSIS">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="1-5 years" />
+                        <MenuItem mnemonicParsing="false" text="6-10 years" />
+                        <MenuItem mnemonicParsing="false" text="11-15 years" />
+                        <MenuItem mnemonicParsing="false" text="16-18 years" />
+                        <MenuItem mnemonicParsing="false" text="18+ " />
+                     </items>
+                  </SplitMenuButton>
+                  <Text layoutX="25.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Whose Birthday it is?" />
+                  <TextField fx:id="name" layoutX="138.0" layoutY="19.0" onAction="#getName" prefHeight="25.0" prefWidth="138.0" promptText="Name" />
+                  <VBox layoutY="78.0" prefHeight="170.0" prefWidth="644.0" AnchorPane.topAnchor="80.0">
+                     <children>
+                        <ListView fx:id="giftsRecommended" prefHeight="162.0" prefWidth="633.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding></ListView>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></VBox>
+                  <Text layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="These are the available gifts we have" wrappingWidth="261.490234375" />
+                  <Button layoutX="594.0" layoutY="361.0" mnemonicParsing="false" onAction="#exitProgram" text="Exit" />
+                  <Button layoutX="439.0" layoutY="50.0" mnemonicParsing="false" onAction="#addGift" text="Add Gift" />
+                  <Button layoutX="523.0" layoutY="50.0" mnemonicParsing="false" onAction="#deleteGift" text="Delete Gift" />
+                  <VBox layoutX="4.0" layoutY="272.0" prefHeight="71.0" prefWidth="633.0">
+                     <children>
+                        <ListView fx:id="selectedGiftList" editable="true" opacity="0.87" prefHeight="126.0" prefWidth="547.0" snapToPixel="false">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </ListView>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <Button layoutX="295.0" layoutY="50.0" mnemonicParsing="false" onAction="#displayGifts" text="Show Gifts" />
+                  <Text layoutX="24.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The following are the gifts you have selected " />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
